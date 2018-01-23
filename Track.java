@@ -15,6 +15,7 @@ public class Track
     private String filename;
     
     private int playCount;
+    private int year;
     /**
      * Constructor for objects of class Track.
      * @param artist The track's artist.
@@ -25,6 +26,7 @@ public class Track
     {
         setDetails(artist, title, filename);
         playCount = 0;
+        year = 0;
     }
     
     /**
@@ -37,6 +39,7 @@ public class Track
     {
         setDetails("unknown", "unknown", filename);
         playCount = 0;
+        year = 0;
     }
     
     /**
@@ -72,7 +75,7 @@ public class Track
      */
     public String getDetails()
     {
-        return artist + ": " + title + "  (file: " + filename + ") -> numero_reproduciones " + playCount;
+        return artist + ": " + title + "  (file: " + filename + ") -> numero_reproduciones " + playCount + " - Año: " + year;
     }
     
     /**
@@ -97,4 +100,15 @@ public class Track
     {
         playCount = playCount + 1;
     }
+    
+    public int getYear()
+    {
+        return year;
+    }
+    
+    public void setYear(int year)
+    {
+        this.year = year;
+    }
+    
 }
