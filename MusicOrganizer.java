@@ -15,6 +15,7 @@ public class MusicOrganizer
     private MusicPlayer player;
     // A reader that can read music files and load them as tracks.
     private TrackReader reader;
+    
 
     /**
      * Create a MusicOrganizer
@@ -169,5 +170,16 @@ public class MusicOrganizer
         for(Track track : tempTracks) {
             addTrack(track);
         }
+    }
+    
+    public void findInTitle(String searchString)
+    {
+        for(Track track : tracks){
+            String title = track.getTitle();
+            if(title.contains(searchString)){
+                System.out.println(track.getDetails());
+            }
+        }
+        
     }
 }

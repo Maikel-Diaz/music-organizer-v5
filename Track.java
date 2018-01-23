@@ -14,6 +14,7 @@ public class Track
     // Where the track is stored.
     private String filename;
     
+    
     /**
      * Constructor for objects of class Track.
      * @param artist The track's artist.
